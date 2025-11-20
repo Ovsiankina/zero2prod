@@ -1,10 +1,22 @@
 [package]
 name = "zero2prod"
 version = "0.1.0"
+authors = [
+	"Ovisankina <ovsiankina@proton.me>",
+	"Luca Palmieri <contact@lpalmieri.com>"
+]
 edition = "2024"
 
+[lib]
+path = "src/lib.rs"
+
+[dev-dependencies]
+reqwest = "0.12"
+
 [dependencies]
+actix-web = "4.11.0"
 cargo-watch = "8.5.3"
+tokio = { version = "1.48", features = ["full"] }
 
 # On Linux:
 # - Ubuntu, `sudo apt-get install lld clang`
